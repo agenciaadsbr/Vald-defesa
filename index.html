@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vald.Defesa | Advocacia Criminal em Goiás</title>
+<meta name="description" content="Vald.Defesa — advocacia criminal em Goiás: atuação em investigações, flagrantes, audiências de custódia, habeas corpus, processos criminais e recursos, com análise individualizada e sigilo.">
+<meta name="theme-color" content="#0F1D5A">
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vald.Defesa | Advocacia Criminal em Goiás">
+<meta property="og:description" content="Defesa criminal exige estratégia, técnica e precisão.">
+<meta property="og:image" content="img/hero-1280.webp">
+<meta property="og:locale" content="pt_BR">
+<link rel="preload" as="image" href="img/hero-m-800.webp" media="(max-width: 759px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w" imagesizes="100vw" media="(min-width: 760px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalService","name":"Vald.Defesa","areaServed":{"@type":"State","name":"Goiás"},"description":"Advocacia criminal: investigações, flagrante e prisão, audiência de custódia, habeas corpus, processos criminais, recursos e execução penal."}</script>
+<style>
+:root{
+  --blue:#0F1D5A;--deep:#0A1444;--ink:#070E30;--blue2:#16267A;--accent:#4459C4;
+  --paper:#F5F6FA;--line:#DCE0EC;--text-l:#3A4466;--mute-l:#5B6486;
+  --white:#FFFFFF;--lav:#B3C3FF;--mute:#9AA6D6;--yellow:#FEC551;
+  --green:#0E8038;--green-h:#0B6B2F;
+  --font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pad:clamp(20px,5vw,72px);--max:1240px;--r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--white);font:400 16px/1.7 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font);font-weight:600;letter-spacing:-.025em;line-height:1.1;margin:0}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sq{display:inline-block;width:.2em;height:.2em;background:var(--yellow);margin-left:.06em}
+.hl{color:var(--yellow)}
+.light .hl{color:var(--accent)}
+.eyebrow{display:flex;align-items:center;gap:12px;font:500 12px/1 var(--font);letter-spacing:.2em;text-transform:uppercase;color:var(--lav);margin-bottom:24px}
+.eyebrow::before{content:"";width:8px;height:8px;background:var(--yellow);flex:none}
+.light .eyebrow{color:var(--accent)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--white);color:var(--ink);padding:10px 14px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:var(--deep)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.03)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:8px;font:600 15px/1 var(--font);text-decoration:none;border:0;cursor:pointer;transition:background .25s,transform .25s,border-color .25s,box-shadow .25s}
+.btn-wa{background:var(--green);color:#fff;box-shadow:0 10px 24px -10px rgba(14,128,56,.8)}
+.btn-wa:hover{background:var(--green-h);transform:translateY(-2px)}
+.btn-wa svg{width:20px;height:20px;flex:none}
+.btn-ghost{color:var(--white);border:1.5px solid rgba(255,255,255,.35);background:rgba(255,255,255,.04);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--white)}
+.arrow{transition:transform .25s}.btn:hover .arrow{transform:translateX(3px)}
+
+/* Header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(10,20,68,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:rgba(179,195,255,.14)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand img{height:34px;width:auto}
+.nav{display:none}
+.nav a{font-size:14px;font-weight:500;text-decoration:none;color:#D9E0FF;transition:color .2s}
+.nav a:hover{color:var(--yellow)}
+.menu-btn{width:46px;height:46px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.05);color:var(--white);border-radius:8px;display:grid;place-items:center;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:1.5px;background:currentColor;box-shadow:0 6px 0 currentColor,0 -6px 0 currentColor;transition:.25s}
+.menu-open .menu-btn span{box-shadow:none;transform:rotate(45deg)}
+.menu-open .menu-btn span::after{content:"";display:block;width:18px;height:1.5px;background:currentColor;transform:rotate(-90deg)}
+.mnav{position:fixed;inset:78px 0 0;background:var(--deep);padding:40px var(--pad);display:flex;flex-direction:column;gap:6px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;z-index:49}
+.menu-open .mnav{opacity:1;visibility:visible}
+.mnav a{font:600 28px/1.3 var(--font);letter-spacing:-.02em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mnav .btn{margin-top:28px;font:600 15px/1 var(--font);border:0}
+@media(min-width:960px){
+  .brand img{height:40px}
+  .nav{display:flex;align-items:center;gap:34px}
+  .nav .btn{min-height:44px;padding:0 20px;font-size:14px;color:#fff}
+  .menu-btn,.mnav{display:none}
+}
+
+/* 01 Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--deep)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,68,.55) 0%,rgba(10,20,68,.35) 30%,rgba(10,20,68,.88) 72%,var(--deep) 100%)}
+@media(min-width:760px){.hero-bg::after{background:linear-gradient(90deg,rgba(10,20,68,.96) 0%,rgba(10,20,68,.82) 38%,rgba(10,20,68,.25) 72%,rgba(10,20,68,.45) 100%),linear-gradient(0deg,var(--deep) 0%,transparent 35%)}}
+.hero-ring{position:absolute;right:-8vw;top:50%;width:min(62vw,760px);aspect-ratio:1;border:3px solid rgba(255,255,255,.12);border-radius:50%;transform:translateY(-55%);pointer-events:none;display:none}
+.hero-ring::after{content:"";position:absolute;inset:14%;border:1px solid rgba(179,195,255,.12);border-radius:50%}
+@media(min-width:760px){.hero-ring{display:block}}
+.hero-inner{position:relative;width:100%;padding-top:150px;padding-bottom:clamp(36px,6vh,64px)}
+.hero-ref{font:500 11.5px/1.6 var(--font);letter-spacing:.2em;text-transform:uppercase;color:var(--lav);margin-bottom:24px;display:inline-flex;align-items:center;gap:12px;padding:8px 14px 8px 12px;border:1px solid rgba(179,195,255,.22);border-radius:100px;background:rgba(10,20,68,.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero-ref::before{content:"";width:7px;height:7px;background:var(--yellow)}
+.hero h1{font-size:clamp(40px,7vw,92px);max-width:12.5ch;letter-spacing:-.04em;line-height:1.02;text-wrap:balance}
+.hero-sub{max-width:500px;margin-top:26px;color:#D9E0FF;font-size:clamp(16px,1.5vw,18px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-meta{margin-top:clamp(48px,9vh,96px);display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.hero-meta div{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;gap:14px;align-items:baseline;font-size:14px;color:#D9E0FF}
+.hero-meta div::before{content:"";width:7px;height:7px;flex:none;background:var(--yellow);align-self:center}
+@media(min-width:760px){
+  .hero-meta{grid-template-columns:repeat(3,1fr)}
+  .hero-meta div{border-bottom:0;padding:22px 24px 0 0}
+  .hero-meta div+div{border-left:1px solid rgba(255,255,255,.1);padding-left:24px}
+}
+
+/* Faixa */
+.band{background:var(--yellow);color:var(--blue);overflow:hidden;white-space:nowrap;padding:18px 0;position:relative;z-index:2}
+.band-track{display:inline-flex;gap:0;animation:marq 38s linear infinite}
+.band span{display:inline-flex;align-items:center;gap:28px;padding-right:28px;font:600 clamp(16px,1.6vw,20px)/1 var(--font);letter-spacing:-.01em}
+.band span::after{content:"";width:9px;height:9px;background:var(--blue)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* Seções */
+.sec{padding:clamp(88px,11vw,150px) 0}
+.light{background:var(--paper);color:var(--ink)}
+.light h2,.light h3{color:var(--blue)}
+
+/* 02 Contexto */
+.ctx-grid{display:grid;gap:56px;align-items:center}
+.ctx-media{position:relative;margin-right:18px}
+.ctx-media .ph{aspect-ratio:4/5}
+.ctx-media::before{content:"";position:absolute;left:-18px;top:-18px;width:120px;height:120px;background:var(--yellow);border-radius:4px;z-index:0}
+.ctx-media .ph{z-index:1}
+.quote-card{position:absolute;z-index:2;right:-18px;bottom:-28px;max-width:300px;background:var(--blue);color:var(--white);padding:26px 26px 24px;border-radius:12px;box-shadow:0 24px 60px -20px rgba(7,14,48,.6)}
+.quote-card p{margin:0;font:500 18px/1.45 var(--font);letter-spacing:-.01em}
+.quote-card small{display:flex;align-items:center;gap:10px;margin-top:16px;font:500 11px/1 var(--font);letter-spacing:.18em;text-transform:uppercase;color:var(--lav)}
+.quote-card small::before{content:"";width:7px;height:7px;background:var(--yellow)}
+.ctx h2{font-size:clamp(30px,4.2vw,50px);max-width:17ch;margin-bottom:28px}
+.ctx-body{color:var(--text-l);font-size:16.5px;max-width:560px}
+.flow{margin-top:38px;display:grid;gap:22px;position:relative}
+.flow-item{display:flex;gap:18px;align-items:flex-start}
+.flow-ic{flex:none;width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--yellow);display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 0 0 6px var(--paper)}
+.flow-ic svg{width:24px;height:24px}
+.flow h3{font-size:17px;margin:6px 0 4px}
+.flow p{margin:0;color:var(--mute-l);font-size:14.5px;max-width:300px}
+.flow::before{content:"";position:absolute;left:28px;top:28px;bottom:28px;border-left:1.5px dashed #C5CCE4}
+@media(min-width:700px){
+  .flow{grid-template-columns:repeat(3,1fr);gap:20px}
+  .flow::before{left:28px;right:16%;top:28px;bottom:auto;border-left:0;border-top:1.5px dashed #C5CCE4}
+  .flow-item{flex-direction:column;gap:12px}
+}
+@media(min-width:960px){
+  .ctx-grid{grid-template-columns:5fr 6fr;gap:9%}
+  .ctx-media{margin-right:0}
+}
+
+/* 03 Áreas — mosaico */
+.areas{background:var(--blue);position:relative;overflow:hidden}
+.areas::before{content:"";position:absolute;right:-18vw;top:-22vw;width:55vw;height:55vw;border:2px solid rgba(255,255,255,.05);border-radius:50%}
+.areas-head{position:relative;text-align:center;max-width:720px;margin:0 auto 56px}
+.areas-head .eyebrow{justify-content:center}
+.areas h2{font-size:clamp(32px,4.4vw,54px)}
+.areas-lead{color:var(--lav);margin:18px auto 0;max-width:520px}
+.bento{position:relative;display:grid;gap:16px;grid-template-columns:1fr}
+.tile{position:relative;border-radius:18px;padding:28px;background:rgba(255,255,255,.04);border:1px solid rgba(179,195,255,.14);overflow:hidden;transition:transform .35s,border-color .35s,background .35s}
+.tile:hover{transform:translateY(-4px);border-color:rgba(254,197,81,.5);background:rgba(255,255,255,.07)}
+.tile-ic{width:48px;height:48px;border-radius:12px;background:rgba(254,197,81,.12);color:var(--yellow);display:grid;place-items:center;margin-bottom:22px}
+.tile-ic svg{width:24px;height:24px}
+.tile h3{font-size:20px;margin-bottom:10px}
+.tile p{margin:0;color:var(--lav);font-size:14.5px}
+.tile-feat{min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;border:0}
+.tile-feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.tile-feat:hover img{transform:scale(1.04)}
+.tile-feat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,68,.05) 20%,rgba(10,20,68,.92) 85%)}
+.tile-feat>*:not(img){position:relative;z-index:1}
+.tile-feat .tag{display:inline-flex;align-self:flex-start;gap:8px;align-items:center;font:600 11px/1 var(--font);letter-spacing:.16em;text-transform:uppercase;color:var(--blue);background:var(--yellow);padding:8px 12px;border-radius:100px;margin-bottom:18px}
+.tile-feat h3{font-size:clamp(24px,2.6vw,32px)}
+.tile-feat p{color:#D9E0FF;max-width:420px;font-size:15.5px}
+.tile-wide{display:grid;gap:22px;align-items:center;background:var(--yellow);border:0;color:var(--blue)}
+.tile-wide:hover{background:#FFD173}
+.tile-wide .tile-ic{background:var(--blue);color:var(--yellow);margin:0}
+.tile-wide h3{color:var(--blue)}
+.tile-wide p{color:#24306B}
+.tile-wide .btn{background:var(--blue);color:#fff;box-shadow:none}
+.tile-wide .btn:hover{background:var(--deep)}
+@media(min-width:760px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .tile-feat{grid-column:span 2}
+  .tile-wide{grid-column:span 2;grid-template-columns:auto 1fr auto}
+}
+@media(min-width:1060px){
+  .bento{grid-template-columns:1.25fr 1fr 1fr}
+  .tile-feat{grid-column:1;grid-row:span 2;min-height:0}
+  .tile-wide{grid-column:span 3}
+}
+
+/* 04 Defesa técnica — abas */
+.tech-grid{display:grid;gap:56px}
+.tech h2{font-size:clamp(34px,4.8vw,60px);margin-bottom:22px}
+.tech-lead{max-width:520px;color:var(--text-l);font-size:16.5px;margin:0 0 34px}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.tab{appearance:none;border:1.5px solid var(--line);background:var(--white);color:var(--blue);font:500 14px/1 var(--font);padding:13px 18px;border-radius:100px;cursor:pointer;transition:background .25s,border-color .25s,color .25s}
+.tab:hover{border-color:var(--accent)}
+.tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:32px;position:relative;overflow:hidden;min-height:210px}
+.panel::before{content:"";position:absolute;left:0;top:32px;width:5px;height:44px;background:var(--yellow);border-radius:0 3px 3px 0}
+.panel-ic{width:52px;height:52px;border-radius:14px;background:#EDF0F8;color:var(--blue);display:grid;place-items:center;margin-bottom:18px}
+.panel-ic svg{width:26px;height:26px}
+.panel h3{font-size:24px;margin-bottom:10px}
+.panel p{margin:0;color:var(--text-l);font-size:16px;max-width:520px}
+.js .panel[hidden]{display:none}
+.panel.show{animation:fadeIn .45s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}}
+.tech-media{position:relative}
+.tech-media .ph{aspect-ratio:4/5}
+.law-card{position:absolute;right:-14px;bottom:28px;z-index:2;background:var(--blue);color:var(--white);border-radius:14px;padding:22px 24px;max-width:290px;box-shadow:0 24px 60px -18px rgba(7,14,48,.55)}
+.law-card small{display:flex;align-items:center;gap:10px;font:600 11px/1 var(--font);letter-spacing:.16em;text-transform:uppercase;color:var(--lav);margin-bottom:10px}
+.law-card small::before{content:"";width:7px;height:7px;background:var(--yellow)}
+.law-card p{margin:0;font:500 15px/1.5 var(--font)}
+.tech-note{margin-top:72px;padding:34px;background:var(--blue);border-radius:16px;display:flex;flex-direction:column;gap:22px;color:var(--white);position:relative;overflow:hidden}
+.tech-note::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border:2px solid rgba(255,255,255,.08);border-radius:50%}
+.tech-note p{margin:0;max-width:640px;font:500 clamp(17px,1.8vw,21px)/1.5 var(--font);letter-spacing:-.01em;position:relative;z-index:1}
+.tech-note .btn{position:relative;z-index:1}
+@media(min-width:960px){
+  .tech-grid{grid-template-columns:5fr 6fr;gap:8%;align-items:center}
+  .tech-note{flex-direction:row;justify-content:space-between;align-items:center;padding:40px 48px}
+  .law-card{right:-40px}
+}
+
+/* 05 Princípios — manifesto */
+.prin{background:var(--deep);position:relative;overflow:hidden}
+.prin-bg{position:absolute;inset:0;opacity:.35}
+.prin-bg img{width:100%;height:100%;object-fit:cover}
+.prin-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 40%,rgba(10,20,68,.4),var(--deep) 85%)}
+.prin .wrap{position:relative}
+.prin-head{text-align:center;max-width:680px;margin:0 auto 64px}
+.prin-head .eyebrow{justify-content:center}
+.prin h2{font-size:clamp(30px,4vw,50px)}
+.prin-head p{color:#D9E0FF;margin:20px auto 0;max-width:520px}
+.mani{list-style:none;margin:0 auto;padding:0;max-width:1040px}
+.mani li{display:grid;gap:10px;padding:30px 0;border-top:1px solid rgba(179,195,255,.14)}
+.mani li:last-child{border-bottom:1px solid rgba(179,195,255,.14)}
+.mani h3{font-size:clamp(38px,7vw,88px);font-weight:600;letter-spacing:-.045em;line-height:1;color:transparent;-webkit-text-stroke:1.4px rgba(255,255,255,.75);transition:color .4s,-webkit-text-stroke-color .4s}
+.mani li:hover h3,.mani li.in h3{color:var(--white);-webkit-text-stroke-color:transparent}
+.mani h3 .sq{width:.14em;height:.14em}
+.mani p{margin:0;color:var(--lav);font-size:15.5px;max-width:360px}
+@media(min-width:900px){
+  .mani li{grid-template-columns:auto 1fr;align-items:center;gap:40px}
+  .mani li:nth-child(even){grid-template-columns:1fr auto;text-align:right}
+  .mani li:nth-child(even) h3{order:2}
+  .mani li:nth-child(even) p{order:1;justify-self:end}
+}
+
+/* 06 Contato */
+.cta{position:relative;overflow:hidden;background:var(--deep)}
+.cta-bg{position:absolute;inset:0}
+.cta-bg img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,68,.82),rgba(10,20,68,.94))}
+@media(min-width:960px){.cta-bg::after{background:linear-gradient(90deg,rgba(10,20,68,.55) 0%,rgba(10,20,68,.82) 45%,rgba(10,20,68,.95) 100%)}}
+.cta-grid{position:relative;z-index:1;display:grid;gap:48px}
+.cta h2{font-size:clamp(32px,4.8vw,60px);max-width:14ch}
+.cta-text p{color:#D9E0FF;max-width:460px;margin-top:26px;font-size:17px}
+.cta-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:12px}
+.cta-list li{display:flex;align-items:center;gap:12px;color:#fff;font-size:15px}
+.cta-list li::before{content:"";width:22px;height:22px;flex:none;border-radius:6px;background:rgba(254,197,81,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FEC551' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/13px no-repeat}
+.form{background:var(--white);color:var(--ink);border-radius:16px;padding:clamp(28px,4vw,44px);box-shadow:0 40px 90px -30px rgba(3,8,30,.7);position:relative}
+.form::before{content:"";position:absolute;top:0;left:32px;width:48px;height:5px;background:var(--yellow);border-radius:0 0 3px 3px}
+.form h3{font-size:24px;margin-bottom:6px;color:var(--blue)}
+.form>p{color:var(--mute-l);font-size:14px;margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font:600 12px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.field input{width:100%;height:56px;background:var(--paper);border:1.5px solid var(--line);color:var(--ink);font:400 16px/1 var(--font);padding:0 16px;border-radius:10px;transition:border-color .25s,background .25s,box-shadow .25s}
+.field input::placeholder{color:#9098B5}
+.field input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(68,89,196,.12)}
+.field .err{display:none;color:#B4361C;font-size:13px;margin-top:8px}
+.field.invalid input{border-color:#C9573A}
+.field.invalid .err{display:block}
+.form .btn{width:100%;margin-top:8px}
+.form .legal{display:flex;gap:10px;font-size:12.5px;color:var(--mute-l);margin:16px 0 0;line-height:1.5}
+.form .legal svg{width:15px;height:15px;flex:none;margin-top:2px;color:var(--accent)}
+.form .legal a{color:var(--accent)}
+@media(min-width:960px){.cta-grid{grid-template-columns:1.1fr 1fr;align-items:center;gap:10%}}
+
+/* 07 FAQ */
+.faq-grid{display:grid;gap:48px}
+.faq h2{font-size:clamp(32px,4.2vw,52px)}
+.faq-side p{color:var(--mute-l);margin-top:22px;max-width:340px}
+.faq-side .btn{margin-top:12px}
+.faq-list{display:grid;gap:12px}
+details{background:var(--white);border:1px solid var(--line);border-radius:14px;transition:border-color .3s,box-shadow .3s}
+details[open]{border-color:#C5CCE4;box-shadow:0 18px 40px -26px rgba(15,29,90,.35)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 24px;font:500 clamp(16px,1.6vw,18px)/1.4 var(--font);letter-spacing:-.01em;color:var(--blue)}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:32px;height:32px;border-radius:8px;background:#EDF0F8;position:relative;transition:background .3s,transform .3s}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--blue);transform:translate(-50%,-50%)}
+summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:opacity .3s}
+details[open] summary .pm{background:var(--yellow);transform:rotate(180deg)}
+details[open] summary .pm::after{opacity:0}
+details .ans{padding:0 24px 24px;color:var(--text-l);font-size:15.5px;max-width:700px}
+details .ans p:last-child{margin:0}
+@media(min-width:960px){.faq-grid{grid-template-columns:4fr 7fr;gap:8%}.faq-side{position:sticky;top:120px;align-self:start}}
+
+/* 08 Rodapé */
+.ftr{background:var(--ink);padding:80px 0 40px;position:relative;overflow:hidden}
+.ftr::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border:2px solid rgba(255,255,255,.04);border-radius:50%}
+.ftr-top{position:relative;display:grid;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ftr-logo{width:140px;height:auto}
+.ftr-desc{color:var(--mute);font-size:14px;max-width:300px;margin-top:22px}
+.ftr h4{font:600 11px/1 var(--font);letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);margin:0 0 18px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ftr ul a{color:var(--mute);text-decoration:none;font-size:14px}
+.ftr ul a:hover{color:var(--white)}
+.ftr-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;font-size:12.5px;color:#7480B0}
+.ftr-bot a{color:var(--mute)}
+@media(min-width:900px){.ftr-top{grid-template-columns:2fr 1fr 1fr 1.2fr}}
+
+/* Botão flutuante */
+.fab{position:fixed;right:18px;bottom:18px;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.35);border:0;cursor:pointer;transition:transform .3s,opacity .3s,visibility .3s}
+.fab svg{width:28px;height:28px}
+.fab:hover{transform:scale(1.06)}
+.fab.hide{opacity:0;visibility:hidden;transform:translateY(12px)}
+.fab::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(14,128,56,.5);animation:ring 3.2s ease-out infinite}
+@keyframes ring{0%{transform:scale(.95);opacity:1}70%,100%{transform:scale(1.25);opacity:0}}
+
+/* Revelação */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+.js .ph.rv img{transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.js .ph.rv.in img{transform:scale(1)}
+.hero .ld{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .ld.d1{animation-delay:.1s}.hero .ld.d2{animation-delay:.2s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.js .ph.rv img{transform:none}html{scroll-behavior:auto}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Vald.Defesa — início"><img src="img/lockup-w.webp" width="442" height="120" alt="Vald.Defesa"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#atuacao">Atuação</a>
+      <a href="#defesa-tecnica">Defesa técnica</a>
+      <a href="#principios">Princípios</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-wa" href="#contato" data-go-form><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Atendimento</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu">
+  <a href="#atuacao">Atuação</a>
+  <a href="#defesa-tecnica">Defesa técnica</a>
+  <a href="#principios">Princípios</a>
+  <a href="#duvidas">Dúvidas</a>
+  <a class="btn btn-wa" href="#contato" data-go-form><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Iniciar atendimento</a>
+</nav>
+
+<main id="conteudo">
+
+<!-- 01 · HERO -->
+<section class="hero" id="topo" aria-labelledby="h1">
+  <picture class="hero-bg">
+    <source media="(max-width: 759px)" srcset="img/hero-m-800.webp">
+    <img src="img/hero-1920.webp" srcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-ring" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="hero-ref ld">Advocacia criminal · Goiás</p>
+    <h1 id="h1">Defesa criminal exige estratégia, técnica e <span class="hl">precisão</span><span class="sq" aria-hidden="true"></span></h1>
+    <p class="hero-sub ld d1">Atuação em investigações e processos criminais com análise individualizada de cada caso, comunicação clara e o sigilo que situações delicadas exigem.</p>
+    <div class="hero-cta ld d2">
+      <a class="btn btn-wa" href="#contato" data-go-form><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Iniciar atendimento</a>
+      <a class="btn btn-ghost" href="#atuacao">Conhecer a atuação <span class="arrow">→</span></a>
+    </div>
+    <div class="hero-meta ld d2">
+      <div>Fase de investigação</div>
+      <div>Prisão, custódia e medidas urgentes</div>
+      <div>Processo criminal e recursos</div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="band-track">
+  <span>Investigações criminais</span><span>Flagrante e prisão</span><span>Audiência de custódia</span><span>Habeas corpus</span><span>Processos criminais</span><span>Recursos</span><span>Execução penal</span>
+  <span>Investigações criminais</span><span>Flagrante e prisão</span><span>Audiência de custódia</span><span>Habeas corpus</span><span>Processos criminais</span><span>Recursos</span><span>Execução penal</span>
+</div></div>
+
+<!-- 02 · CONTEXTO -->
+<section class="light sec ctx" aria-labelledby="h-ctx">
+  <div class="wrap ctx-grid">
+    <div class="ctx-media rv">
+      <div class="ph rv"><img src="img/pen-1000.webp" srcset="img/pen-600.webp 600w, img/pen-1000.webp 1000w" sizes="(min-width:960px) 42vw, 92vw" width="1000" height="1250" alt="Mãos analisando um documento com caneta sobre a mesa" loading="lazy" decoding="async"></div>
+      <div class="quote-card"><p>Defender bem começa por compreender com exatidão.</p><small>Vald.Defesa</small></div>
+    </div>
+    <div class="rv d1">
+      <p class="eyebrow">Contexto</p>
+      <h2 id="h-ctx">Nenhum caso criminal é igual ao outro. <span class="hl">A defesa também não deveria ser.</span></h2>
+      <div class="ctx-body">
+        <p>Uma intimação inesperada, uma investigação em andamento, uma prisão em flagrante ou um processo já instaurado: cada cenário tem prazos, regras e riscos próprios. Decisões tomadas nos primeiros momentos podem repercutir em todo o procedimento.</p>
+        <p>Por isso, a Vald.Defesa parte de uma premissa simples: antes de qualquer estratégia, vem a compreensão completa dos fatos, dos documentos e do momento processual em que o caso se encontra.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-item"><span class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span><div><h3>Escuta atenta</h3><p>Entender o que aconteceu, sem pressa e sem julgamentos.</p></div></div>
+        <div class="flow-item"><span class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><div><h3>Leitura dos elementos</h3><p>Examinar o que existe nos autos e o que ainda pode ser contestado.</p></div></div>
+        <div class="flow-item"><span class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><div><h3>Caminho jurídico</h3><p>Definir as medidas possíveis, com clareza sobre cada uma.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · ÁREAS DE ATUAÇÃO -->
+<section class="areas sec" id="atuacao" aria-labelledby="h-areas">
+  <div class="wrap">
+    <div class="areas-head rv">
+      <p class="eyebrow">Atuação</p>
+      <h2 id="h-areas">Frentes de atuação</h2>
+      <p class="areas-lead">Acompanhamento jurídico nos diferentes momentos da persecução penal — da fase investigativa às instâncias recursais.</p>
+    </div>
+    <div class="bento">
+      <article class="tile tile-feat rv">
+        <img src="img/arch-900.webp" srcset="img/arch-560.webp 560w, img/arch-900.webp 900w" sizes="(min-width:1060px) 40vw, 92vw" width="900" height="1200" alt="" loading="lazy" decoding="async">
+        <span class="tag">Desde o início</span>
+        <h3>Investigações criminais</h3>
+        <p>Acompanhamento em inquéritos e procedimentos investigativos, incluindo depoimentos, análise dos autos e requerimentos à autoridade responsável.</p>
+      </article>
+      <article class="tile rv d1"><span class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Flagrante e prisão</h3><p>Atuação em situações de prisão, com verificação da legalidade do ato e das medidas cabíveis.</p></article>
+      <article class="tile rv d2"><span class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21 20c0-2.6-1.6-4.8-4-5.6"/></svg></span><h3>Audiência de custódia e cautelares</h3><p>Presença na audiência e atuação quanto à liberdade provisória e às medidas cautelares.</p></article>
+      <article class="tile rv d1"><span class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg></span><h3>Habeas corpus e medidas judiciais</h3><p>Medidas diante de ilegalidade ou abuso de poder que afete, ou ameace, a liberdade de locomoção.</p></article>
+      <article class="tile rv d2"><span class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>Defesa em processos criminais</h3><p>Atuação técnica na resposta à acusação, na instrução, no interrogatório e nas alegações finais.</p></article>
+      <article class="tile tile-wide rv"><span class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span><div><h3>Recursos e execução penal</h3><p>Recursos às instâncias superiores e acompanhamento da execução da pena, incluindo pedidos previstos em lei.</p></div><a class="btn" href="#contato" data-go-form>Falar sobre o meu caso <span class="arrow">→</span></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · A IMPORTÂNCIA DA DEFESA TÉCNICA -->
+<section class="light sec tech" id="defesa-tecnica" aria-labelledby="h-tech">
+  <div class="wrap">
+    <div class="tech-grid">
+      <div class="tech-media rv">
+        <div class="ph rv"><img src="img/consult-1000.webp" srcset="img/consult-600.webp 600w, img/consult-1000.webp 1000w" sizes="(min-width:960px) 38vw, 92vw" width="1000" height="1250" alt="Conversa reservada em torno de uma mesa de reunião" loading="lazy" decoding="async"></div>
+        <div class="law-card"><small>Constituição Federal</small><p>Aos acusados em geral são assegurados o contraditório e a ampla defesa (art. 5º, LV).</p></div>
+      </div>
+      <div class="rv d1">
+        <p class="eyebrow">Defesa técnica</p>
+        <h2 id="h-tech">Os primeiros momentos <span class="hl">importam</span><span class="sq" aria-hidden="true"></span></h2>
+        <p class="tech-lead">Exercer o direito de defesa com qualidade depende de método, técnica e atenção desde o início — não apenas quando o processo já está avançado.</p>
+        <div class="tabs" role="tablist" aria-label="Pilares da defesa técnica">
+          <button class="tab" role="tab" id="tab-analise" aria-controls="pn-analise" aria-selected="true" tabindex="0">Análise</button>
+          <button class="tab" role="tab" id="tab-elementos" aria-controls="pn-elementos" aria-selected="false" tabindex="-1">Elementos</button>
+          <button class="tab" role="tab" id="tab-estrategia" aria-controls="pn-estrategia" aria-selected="false" tabindex="-1">Estratégia</button>
+          <button class="tab" role="tab" id="tab-acomp" aria-controls="pn-acomp" aria-selected="false" tabindex="-1">Acompanhamento</button>
+          <button class="tab" role="tab" id="tab-garantias" aria-controls="pn-garantias" aria-selected="false" tabindex="-1">Garantias</button>
+        </div>
+        <div class="panel show" role="tabpanel" id="pn-analise" aria-labelledby="tab-analise"><span class="panel-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><h3>Análise individualizada</h3><p>Cada caso é examinado a partir das suas particularidades: os fatos, o contexto e a fase em que o procedimento se encontra.</p></div>
+        <div class="panel" role="tabpanel" id="pn-elementos" aria-labelledby="tab-elementos" hidden><span class="panel-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><h3>Avaliação dos elementos</h3><p>Leitura cuidadosa de documentos, depoimentos, laudos e demais elementos disponíveis — e do que ainda pode ser produzido.</p></div>
+        <div class="panel" role="tabpanel" id="pn-estrategia" aria-labelledby="tab-estrategia" hidden><span class="panel-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>Estratégia adequada</h3><p>Definição das medidas possíveis para o caso, com explicação clara do que cada uma representa e de seus riscos.</p></div>
+        <div class="panel" role="tabpanel" id="pn-acomp" aria-labelledby="tab-acomp" hidden><span class="panel-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Acompanhamento próximo</h3><p>Atenção a prazos, audiências, decisões e a cada ato do procedimento, com retorno claro sobre o andamento.</p></div>
+        <div class="panel" role="tabpanel" id="pn-garantias" aria-labelledby="tab-garantias" hidden><span class="panel-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10V6z"/></svg></span><h3>Direitos e garantias</h3><p>Atuação voltada à preservação dos direitos fundamentais em todas as fases, da investigação ao processo.</p></div>
+      </div>
+    </div>
+    <div class="tech-note rv">
+      <p>A orientação de um advogado pode ocorrer já na fase de investigação — inclusive antes de prestar um depoimento.</p>
+      <a class="btn btn-wa" href="#contato" data-go-form><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Falar sobre o meu caso</a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · PRINCÍPIOS -->
+<section class="prin sec" id="principios" aria-labelledby="h-prin">
+  <div class="prin-bg" aria-hidden="true"><img src="img/light-900.webp" srcset="img/light-560.webp 560w, img/light-900.webp 900w" sizes="100vw" width="900" height="1200" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap">
+    <div class="prin-head rv">
+      <p class="eyebrow">Princípios</p>
+      <h2 id="h-prin">O que orienta cada atendimento</h2>
+      <p>Quem procura um advogado criminal raramente está em um momento tranquilo. A forma de conduzir a conversa importa tanto quanto o conteúdo dela.</p>
+    </div>
+    <ul class="mani">
+      <li class="rv"><h3>Individualidade<span class="sq" aria-hidden="true"></span></h3><p>Atenção dedicada à sua situação específica, sem respostas prontas ou soluções genéricas.</p></li>
+      <li class="rv"><h3>Discrição<span class="sq" aria-hidden="true"></span></h3><p>Informações tratadas com reserva e sob o sigilo profissional que rege a advocacia.</p></li>
+      <li class="rv"><h3>Técnica<span class="sq" aria-hidden="true"></span></h3><p>Cada orientação apoiada na lei, na jurisprudência e na leitura cuidadosa do caso.</p></li>
+      <li class="rv"><h3>Transparência<span class="sq" aria-hidden="true"></span></h3><p>Linguagem clara sobre cenários, etapas e possibilidades — sem promessas e sem juridiquês.</p></li>
+      <li class="rv"><h3>Estratégia<span class="sq" aria-hidden="true"></span></h3><p>Decisões pensadas para o caso como um todo, considerando os próximos passos.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 · CHAMADA PARA ATENDIMENTO -->
+<section class="cta sec" id="contato" aria-labelledby="h-cta">
+  <div class="cta-bg" aria-hidden="true"><img src="img/phone-1920.webp" srcset="img/phone-1000.webp 1000w, img/phone-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap cta-grid">
+    <div class="cta-text rv">
+      <p class="eyebrow">Atendimento</p>
+      <h2 id="h-cta">Cada situação exige uma análise jurídica <span class="hl">cuidadosa</span><span class="sq" aria-hidden="true"></span></h2>
+      <p>Apresente sua situação com tranquilidade. Após o contato, você recebe orientações sobre os próximos passos possíveis para o seu caso.</p>
+      <ul class="cta-list">
+        <li>Conversa reservada pelo WhatsApp</li>
+        <li>Informações protegidas pelo sigilo profissional</li>
+        <li>Orientação clara sobre os próximos passos</li>
+      </ul>
+    </div>
+    <form class="form rv d1" id="leadForm" novalidate action="redirect.html">
+      <h3>Iniciar atendimento</h3>
+      <p>Preencha os campos e continue a conversa pelo WhatsApp.</p>
+      <div class="field" id="f-nome">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos chamar você" required maxlength="80">
+        <div class="err">Informe seu nome.</div>
+      </div>
+      <div class="field" id="f-wa">
+        <label for="whatsapp">WhatsApp</label>
+        <input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(00) 00000-0000" required maxlength="16">
+        <div class="err">Informe um WhatsApp válido, com DDD.</div>
+      </div>
+      <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Continuar no WhatsApp</button>
+      <p class="legal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Seus dados são usados apenas para este contato. Consulte a <a href="privacidade.html">Política de Privacidade</a>.</span></p>
+    </form>
+  </div>
+</section>
+
+<!-- 07 · PERGUNTAS FREQUENTES -->
+<section class="light sec faq" id="duvidas" aria-labelledby="h-faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side rv">
+      <p class="eyebrow">Dúvidas</p>
+      <h2 id="h-faq">Perguntas frequentes</h2>
+      <p>Respostas informativas e gerais. Cada situação depende da análise do caso concreto.</p>
+      <a class="btn btn-wa" href="#contato" data-go-form><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Tirar uma dúvida</a>
+    </div>
+    <div class="faq-list rv d1">
+      <details>
+        <summary>O que fazer ao receber uma intimação?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Leia o documento com atenção: ele indica quem o expediu, a data, o local e a condição em que você está sendo chamado — como testemunha, vítima ou investigado. Não ignore a intimação e não deixe para a véspera.</p><p>Antes de comparecer, é recomendável buscar a orientação de um advogado, que pode analisar o conteúdo, verificar o procedimento e acompanhar o ato.</p></div>
+      </details>
+      <details>
+        <summary>Como funciona uma audiência de custódia?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>É a apresentação da pessoa presa a um juiz, em regra em até 24 horas após a prisão. Nela, avaliam-se a legalidade da prisão, a ocorrência de eventuais abusos e se é o caso de relaxamento, liberdade provisória — com ou sem medidas cautelares — ou manutenção da prisão.</p><p>Nesse momento, não se discute o mérito da acusação. A presença de defesa técnica é obrigatória.</p></div>
+      </details>
+      <details>
+        <summary>É possível ter acompanhamento jurídico durante uma investigação?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Sim. A pessoa investigada pode ser assistida por advogado durante o inquérito e outros procedimentos investigativos, inclusive em depoimentos e interrogatórios. O advogado pode examinar os autos, observadas as restrições legais quanto a diligências em andamento, e apresentar requerimentos.</p></div>
+      </details>
+      <details>
+        <summary>Quando é possível solicitar habeas corpus?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>O habeas corpus é cabível quando alguém sofre, ou se encontra ameaçado de sofrer, violência ou coação em sua liberdade de locomoção por ilegalidade ou abuso de poder — por exemplo, uma prisão sem fundamentação adequada ou que se prolonga além do razoável.</p><p>A viabilidade depende da análise do caso concreto.</p></div>
+      </details>
+      <details>
+        <summary>Como funciona a defesa em um processo criminal?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Após o recebimento da denúncia, a defesa apresenta resposta à acusação, acompanha a produção de provas na instrução — testemunhas, perícias e interrogatório —, apresenta alegações finais e, se for o caso, recursos. Em cada fase, as medidas são definidas de acordo com os elementos do processo.</p></div>
+      </details>
+      <details>
+        <summary>O que eu contar ao advogado fica em sigilo?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Sim. O sigilo profissional é um dever do advogado, previsto no Estatuto da Advocacia e no Código de Ética e Disciplina da OAB. As informações compartilhadas no atendimento são tratadas com reserva.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 08 · RODAPÉ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <a href="#topo" aria-label="Vald.Defesa — início"><img class="ftr-logo" src="img/full-w.webp" width="240" height="260" alt="Vald.Defesa — Goiás" loading="lazy" decoding="async"></a>
+        <p class="ftr-desc">Advocacia criminal em Goiás, com análise individualizada, técnica e discrição.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul><li><a href="#atuacao">Atuação</a></li><li><a href="#defesa-tecnica">Defesa técnica</a></li><li><a href="#principios">Princípios</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul><li><a href="privacidade.html">Política de Privacidade</a></li></ul>
+        <!-- EDITÁVEL: incluir aqui o endereço quando fornecido. Ex.: <li>Rua ..., nº ... — Goiânia/GO</li> -->
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a class="btn btn-wa" href="#contato" data-go-form><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Atendimento</a>
+        <!-- EDITÁVEL: telefone e e-mail institucionais quando fornecidos -->
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>© <span id="yr">2026</span> Vald.Defesa</span>
+      <!-- EDITÁVEL: identificação profissional e OAB (Nome do advogado · OAB/GO nº ...) somente quando os dados forem disponibilizados -->
+      <a href="privacidade.html">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" id="fab" type="button" aria-label="Iniciar atendimento pelo WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg></button>
+
+<script src="config.js"></script>
+<script>(function(){
+  /* Supabase — ADS BR CLIENTES (tabelas multi-tenant lp_visits / lp_leads) */
+  var SB_URL='https://qxhnjzyhtllmtdrcyygi.supabase.co';
+  var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4aG5qenlodGxsbXRkcmN5eWdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzczNjgsImV4cCI6MjA5NzgxMzM2OH0.DWf4I_x9F--H7ZZHUt_n4V3B__Nlsf1jNZdUV0vNBLU';
+  var SITE='vald-defesa';
+  function insert(table,row){return fetch(SB_URL+'/rest/v1/'+table,{method:'POST',keepalive:true,headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(row)}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status)})}
+  function origem(){
+    try{var s=sessionStorage.getItem('lp_origem');if(s)return s}catch(e){}
+    var q=new URLSearchParams(location.search),o;
+    if(q.get('utm_source'))o=q.get('utm_source')+(q.get('utm_campaign')?' / '+q.get('utm_campaign'):'');
+    else if(q.get('gclid')||q.get('gbraid')||q.get('wbraid'))o='google-ads';
+    else if(q.get('fbclid'))o='meta';
+    else if(document.referrer){try{o=new URL(document.referrer).hostname.replace(/^www\./,'')}catch(e){o='referência'}}
+    else o='direto';
+    o=o.slice(0,120);try{sessionStorage.setItem('lp_origem',o)}catch(e){}return o}
+  var ORIGEM=origem();
+  window.VALD_DB={site:SITE,origem:ORIGEM,insert:insert};
+  try{insert('lp_visits',{site:SITE,referrer:document.referrer||null,path:location.pathname+location.search}).catch(function(){})}catch(e){}
+})();
+
+(function(){
+  var d=document,hdr=d.getElementById('hdr'),fab=d.getElementById('fab');
+  d.getElementById('yr').textContent=new Date().getFullYear();
+  /* header */
+  var onS=function(){hdr.classList.toggle('solid',scrollY>40)};onS();addEventListener('scroll',onS,{passive:true});
+  /* menu */
+  var mb=d.getElementById('menuBtn');
+  function closeMenu(){d.body.classList.remove('menu-open');mb.setAttribute('aria-expanded','false');mb.setAttribute('aria-label','Abrir menu')}
+  mb.addEventListener('click',function(){var o=d.body.classList.toggle('menu-open');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fechar menu':'Abrir menu')});
+  d.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+  /* ir ao formulário */
+  function goForm(e){if(e)e.preventDefault();closeMenu();d.getElementById('contato').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});setTimeout(function(){d.getElementById('nome').focus({preventScroll:true})},650)}
+  d.querySelectorAll('[data-go-form]').forEach(function(a){a.addEventListener('click',goForm)});
+  fab.addEventListener('click',goForm);
+  /* reveal + fab */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+    new IntersectionObserver(function(es){es.forEach(function(e){fab.classList.toggle('hide',e.isIntersecting)})},{threshold:.25}).observe(d.getElementById('contato'));
+  } else d.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+  /* máscara */
+  var wa=d.getElementById('whatsapp');
+  wa.addEventListener('input',function(){var v=wa.value.replace(/\D/g,'').slice(0,11),o=v;if(v.length>2)o='('+v.slice(0,2)+') '+v.slice(2);if(v.length>7)o='('+v.slice(0,2)+') '+v.slice(2,v.length-4)+'-'+v.slice(-4);wa.value=o});
+  /* envio */
+  d.getElementById('leadForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var nome=d.getElementById('nome').value.trim(),tel=wa.value.replace(/\D/g,''),ok=true;
+    d.getElementById('f-nome').classList.toggle('invalid',nome.length<2);if(nome.length<2)ok=false;
+    var tOk=tel.length>=10&&tel.length<=11;d.getElementById('f-wa').classList.toggle('invalid',!tOk);if(!tOk)ok=false;
+    if(!ok){(nome.length<2?d.getElementById('nome'):wa).focus();return}
+    try{sessionStorage.setItem('vald_lead',JSON.stringify({nome:nome,whatsapp:tel}))}catch(x){}
+    window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'lead_form_submit',form:'vald_atendimento'});
+    if(typeof fbq==='function'){try{fbq('track','Lead')}catch(x){}}
+    var btn=this.querySelector('button[type=submit]');if(btn)btn.disabled=true;
+    var go=function(){location.href='redirect.html?nome='+encodeURIComponent(nome)+(location.search?'&'+location.search.slice(1):'')};
+    var done=false,finish=function(){if(!done){done=true;go()}};
+    try{window.VALD_DB.insert('lp_leads',{site:window.VALD_DB.site,nome:nome,whatsapp:tel,origem:window.VALD_DB.origem}).then(finish,finish)}catch(x){finish()}
+    setTimeout(finish,2500);
+  });
+})();
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function sel(t,focus){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;var p=document.getElementById(b.getAttribute('aria-controls'));p.hidden=!on;p.classList.toggle('show',on)});if(focus)t.focus()}
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){sel(b)});b.addEventListener('keydown',function(e){var k=e.key,n=null;if(k==='ArrowRight')n=tabs[(i+1)%tabs.length];if(k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];if(n){e.preventDefault();sel(n,true)}})});
+})();
+</script>
+</body>
+</html>

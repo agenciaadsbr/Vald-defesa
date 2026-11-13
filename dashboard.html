@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Leads — Vald.Defesa</title>
+<link rel="icon" href="/img/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#070E30;--card:#0F1D5A;--line:#22327A;--txt:#FFFFFF;--mut:#B3C3FF;--dim:#8592C8;--acc:#FEC551;--grn:#22C55E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:28px 20px 48px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+h1{margin:0;font-size:18px;font-weight:600;letter-spacing:.06em}
+h2{margin:0;font-size:14px;font-weight:600}
+.sub{color:var(--mut);font-size:13px;margin-top:4px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}
+button,.btn{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--txt);padding:8px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+button:hover,.btn:hover{background:#16267A}
+.grid{display:grid;gap:16px}
+.chead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.range{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--dim);font-size:11px;letter-spacing:.08em}
+input{font:inherit;background:#0A1444;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:8px 10px;font-size:13px;color-scheme:dark}
+.chart{position:relative;height:280px}
+.legend{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:12px;color:var(--mut);font-size:12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.kpi .v{font-size:22px;font-weight:600;margin-top:6px}
+.kpi .l{color:var(--dim);font-size:11px;letter-spacing:.08em}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;color:var(--dim);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:12px;border-bottom:1px solid #1A2A70;color:#E8ECFF;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.tbl{overflow-x:auto}
+.empty{color:var(--dim);text-align:center;padding:28px 12px}
+.wa{color:var(--grn);border-color:rgba(34,197,94,.35)}
+.wa:hover{background:rgba(34,197,94,.08)}
+/* login */
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.login form{width:100%;max-width:360px;display:flex;flex-direction:column;gap:12px}
+.login label{font-size:12px;color:var(--mut)}
+.login input{width:100%;padding:11px 12px}
+.login button{justify-content:center;padding:11px;background:var(--acc);color:#0F1D5A;border-color:var(--acc)}
+.login button:hover{background:#FFD173}
+.login .err{color:#F87171;font-size:13px;min-height:18px}
+.brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:8px}
+.brand img{width:160px;height:auto}
+.kpi{border-top:3px solid var(--acc)}
+@media (max-width:640px){.kpis{grid-template-columns:1fr}.top{flex-direction:column}.chart{height:240px}}
+</style>
+</head>
+<body>
+
+<div id="login" class="login" hidden>
+<form id="lf" class="card" autocomplete="on">
+<div class="brand"><img src="/img/lockup-w.webp" alt="Vald.Defesa" width="442" height="120"><h1 style="font-size:15px">PAINEL DE LEADS</h1></div>
+<label for="u">Usuário</label><input id="u" name="username" autocomplete="username" required value="Admin">
+<label for="p">Senha</label><input id="p" name="password" type="password" autocomplete="current-password" required>
+<div class="err" id="lerr" role="alert"></div>
+<button type="submit" id="lbtn">ENTRAR</button>
+</form>
+</div>
+
+<div id="app" class="wrap" hidden>
+<div class="top">
+<div><img src="/img/lockup-w.webp" alt="Vald.Defesa" width="442" height="120" style="height:32px;width:auto;margin-bottom:12px"><h1>LEADS — VALD.DEFESA</h1><div class="sub" id="total">Carregando…</div></div>
+<button id="sair">SAIR</button>
+</div>
+
+<div class="kpis">
+<div class="card kpi"><div class="l">VISITAS</div><div class="v" id="k-v">–</div></div>
+<div class="card kpi"><div class="l">CADASTROS</div><div class="v" id="k-l">–</div></div>
+<div class="card kpi"><div class="l">CONVERSÃO</div><div class="v" id="k-c">–</div></div>
+</div>
+
+<div class="grid">
+<div class="card">
+<div class="chead"><h2>Evolução diária</h2>
+<div class="range"><label for="de">DE</label><input type="date" id="de"><label for="ate">ATÉ</label><input type="date" id="ate"></div>
+</div>
+<div class="chart"><canvas id="ch" aria-label="Gráfico de visitas, cadastros e conversão por dia" role="img"></canvas></div>
+<div class="legend"><span><i style="background:#B3C3FF"></i>Visitas</span><span><i style="background:#FEC551"></i>Cadastros</span><span><i style="background:#22C55E"></i>Taxa de conversão %</span></div>
+</div>
+
+<div class="card">
+<div class="chead"><h2>Conversão por LP</h2></div>
+<div class="tbl"><table><thead><tr><th>LP</th><th>Visitas</th><th>Leads</th><th>Conv.</th></tr></thead><tbody id="t-lp"></tbody></table></div>
+</div>
+
+<div class="card">
+<div class="chead"><h2>Leads</h2></div>
+<div class="tbl"><table><thead><tr><th>Nome</th><th>WhatsApp</th><th>LP</th><th>Origem</th><th>Data</th><th>Ação</th></tr></thead><tbody id="t-leads"></tbody></table></div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+(function(){
+  var SB_URL = 'https://qxhnjzyhtllmtdrcyygi.supabase.co';
+  var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4aG5qenlodGxsbXRkcmN5eWdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzczNjgsImV4cCI6MjA5NzgxMzM2OH0.DWf4I_x9F--H7ZZHUt_n4V3B__Nlsf1jNZdUV0vNBLU';
+  var SITE = 'vald-defesa';
+  var CLIENTE = 'Vald.Defesa';
+  var USERS = { 'admin': 'admin@vald-defesa.adsbr.internal' };
+
+  var sb = supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, storageKey: 'lp-dash-' + SITE } });
+  var $ = function(id){ return document.getElementById(id); };
+  var chart = null;
+
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]; }); }
+  function ymd(d){ var z = function(n){ return (n < 10 ? '0' : '') + n; }; return d.getFullYear() + '-' + z(d.getMonth()+1) + '-' + z(d.getDate()); }
+  function fmtTel(d){ d = String(d || '').replace(/\D/g,''); if (d.indexOf('55') === 0 && d.length > 11) d = d.slice(2); return d.length === 11 ? '(' + d.slice(0,2) + ') ' + d.slice(2,7) + '-' + d.slice(7) : d.length === 10 ? '(' + d.slice(0,2) + ') ' + d.slice(2,6) + '-' + d.slice(6) : d; }
+  function waNum(d){ d = String(d || '').replace(/\D/g,''); return d.indexOf('55') === 0 && d.length >= 12 ? d : '55' + d; }
+  function pct(a, b){ return b ? (a / b * 100) : 0; }
+
+  async function fetchAll(table, cols, from, to){
+    var out = [], step = 1000, i = 0;
+    while (true) {
+      var r = await sb.from(table).select(cols).eq('site', SITE).gte('created_at', from).lt('created_at', to).order('created_at', { ascending: false }).range(i, i + step - 1);
+      if (r.error) throw r.error;
+      out = out.concat(r.data || []);
+      if (!r.data || r.data.length < step) break;
+      i += step;
+    }
+    return out;
+  }
+
+  async function load(){
+    var de = $('de').value, ate = $('ate').value;
+    var from = new Date(de + 'T00:00:00'), to = new Date(ate + 'T00:00:00'); to.setDate(to.getDate() + 1);
+    $('total').textContent = 'Carregando…';
+    try {
+      var res = await Promise.all([
+        fetchAll('lp_visits', 'created_at', from.toISOString(), to.toISOString()),
+        fetchAll('lp_leads', 'nome, whatsapp, origem, site, created_at', from.toISOString(), to.toISOString())
+      ]);
+    } catch (e) {
+      $('total').textContent = 'Erro ao carregar os dados.'; return;
+    }
+    var visits = res[0], leads = res[1];
+    $('total').textContent = leads.length + (leads.length === 1 ? ' lead' : ' leads') + ' no período';
+    $('k-v').textContent = visits.length.toLocaleString('pt-BR');
+    $('k-l').textContent = leads.length.toLocaleString('pt-BR');
+    $('k-c').textContent = pct(leads.length, visits.length).toFixed(1).replace('.', ',') + '%';
+
+    // série diária
+    var days = [], mv = {}, ml = {};
+    for (var d = new Date(from); d < to; d.setDate(d.getDate() + 1)) { var k = ymd(d); days.push(k); mv[k] = 0; ml[k] = 0; }
+    visits.forEach(function(v){ var k = ymd(new Date(v.created_at)); if (k in mv) mv[k]++; });
+    leads.forEach(function(l){ var k = ymd(new Date(l.created_at)); if (k in ml) ml[k]++; });
+    var labels = days.map(function(k){ return k.slice(8,10) + '/' + k.slice(5,7); });
+    var dv = days.map(function(k){ return mv[k]; }), dl = days.map(function(k){ return ml[k]; });
+    var dc = days.map(function(k){ return +pct(ml[k], mv[k]).toFixed(1); });
+    if (chart) chart.destroy();
+    chart = new Chart($('ch'), {
+      type: 'line',
+      data: { labels: labels, datasets: [
+        { label: 'Visitas', data: dv, borderColor: '#B3C3FF', backgroundColor: '#B3C3FF', tension: .3, pointRadius: 2, borderWidth: 2, yAxisID: 'y' },
+        { label: 'Cadastros', data: dl, borderColor: '#FEC551', backgroundColor: '#FEC551', tension: .3, pointRadius: 2, borderWidth: 2, yAxisID: 'y' },
+        { label: 'Conversão %', data: dc, borderColor: '#22C55E', backgroundColor: '#22C55E', tension: .3, pointRadius: 2, borderWidth: 2, borderDash: [4,4], yAxisID: 'y1' }
+      ]},
+      options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0A1444', borderColor: '#22327A', borderWidth: 1, callbacks: { label: function(c){ return ' ' + c.dataset.label + ': ' + c.formattedValue + (c.datasetIndex === 2 ? '%' : ''); } } } },
+        scales: {
+          x: { grid: { color: '#1A2A70' }, ticks: { color: '#8592C8', maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } },
+          y: { beginAtZero: true, grid: { color: '#1A2A70' }, ticks: { color: '#8592C8', precision: 0 } },
+          y1: { beginAtZero: true, position: 'right', grid: { display: false }, ticks: { color: '#8592C8', callback: function(v){ return v + '%'; } } }
+        } }
+    });
+
+    // conversão por LP
+    var tlp = $('t-lp');
+    if (!visits.length && !leads.length) tlp.innerHTML = '<tr><td colspan="4" class="empty">Nenhum dado encontrado</td></tr>';
+    else tlp.innerHTML = '<tr><td>' + esc(SITE) + '</td><td>' + visits.length + '</td><td>' + leads.length + '</td><td>' + pct(leads.length, visits.length).toFixed(1).replace('.', ',') + '%</td></tr>';
+
+    // leads
+    var tl = $('t-leads');
+    if (!leads.length) { tl.innerHTML = '<tr><td colspan="6" class="empty">Nenhum lead encontrado</td></tr>'; return; }
+    tl.innerHTML = leads.map(function(l){
+      var dt = new Date(l.created_at);
+      var msg = 'Olá, ' + (l.nome || '').trim() + '. Recebemos seu contato através da ' + CLIENTE + ' e gostaria de dar continuidade ao seu atendimento.';
+      var href = 'https://wa.me/' + waNum(l.whatsapp) + '?text=' + encodeURIComponent(msg);
+      return '<tr><td>' + esc(l.nome) + '</td><td>' + esc(fmtTel(l.whatsapp)) + '</td><td>' + esc(l.site) + '</td><td>' + esc(l.origem || '—') + '</td><td>' +
+        esc(dt.toLocaleDateString('pt-BR') + ' ' + dt.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })) +
+        '</td><td><a class="btn wa" target="_blank" rel="noopener" href="' + esc(href) + '">WhatsApp</a></td></tr>';
+    }).join('');
+  }
+
+  function showApp(){ $('login').hidden = true; $('app').hidden = false; load(); }
+  function showLogin(){ $('app').hidden = true; $('login').hidden = false; $('p').focus(); }
+
+  var hoje = new Date(), ini = new Date(); ini.setDate(hoje.getDate() - 29);
+  $('de').value = ymd(ini); $('ate').value = ymd(hoje);
+  $('de').addEventListener('change', load); $('ate').addEventListener('change', load);
+
+  $('lf').addEventListener('submit', async function(ev){
+    ev.preventDefault();
+    var u = $('u').value.trim().toLowerCase(), email = USERS[u];
+    $('lerr').textContent = '';
+    if (!email) { $('lerr').textContent = 'Usuário ou senha inválidos.'; return; }
+    $('lbtn').disabled = true;
+    var r = await sb.auth.signInWithPassword({ email: email, password: $('p').value });
+    $('lbtn').disabled = false;
+    if (r.error) { $('lerr').textContent = 'Usuário ou senha inválidos.'; return; }
+    $('p').value = ''; showApp();
+  });
+  $('sair').addEventListener('click', async function(){ await sb.auth.signOut(); showLogin(); });
+
+  sb.auth.getSession().then(function(r){ if (r.data && r.data.session) showApp(); else showLogin(); });
+})();
+</script>
+</body>
+</html>

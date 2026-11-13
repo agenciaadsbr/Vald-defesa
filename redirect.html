@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vald.Defesa — Redirecionando</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+
+<meta name="theme-color" content="#0F1D5A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+<style>
+:root{--navy:#0F1D5A;--ink:#0A1444;--paper:#FFFFFF;--mute:#B3C3FF;--bronze:#FEC551;--green:#0E8038}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;display:grid;place-items:center;background:radial-gradient(110% 80% at 70% 20%,#1a2b7a,var(--navy) 55%,var(--ink));color:var(--paper);font:400 16px/1.6 "Poppins",system-ui,sans-serif;padding:32px 22px;text-align:center}
+.box{max-width:460px;width:100%}
+.brand img{width:150px;height:auto;margin:0 auto}
+.ring{width:120px;height:120px;margin:56px auto 36px;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:2}
+.ring .bg{stroke:rgba(255,255,255,.14)}
+.ring .fg{stroke:var(--bronze);stroke-dasharray:339.3;stroke-dashoffset:339.3;stroke-linecap:round}
+.ring span{position:absolute;inset:0;display:grid;place-items:center;font:500 40px/1 "Poppins",sans-serif}
+h1{font:600 clamp(26px,6vw,34px)/1.2 "Poppins",sans-serif;margin:0 0 14px;letter-spacing:-.025em}
+p{color:#D9E0FF;margin:0 0 30px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;background:var(--green);color:#fff;text-decoration:none;font:600 15px/1 "Poppins",sans-serif;border-radius:6px}
+.btn svg{width:20px;height:20px}
+.back{display:block;margin-top:22px;font-size:13px;color:var(--mute)}
+@media(prefers-reduced-motion:reduce){.ring .fg{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="box">
+  <div class="brand"><img src="img/full-w.webp" width="240" height="260" alt="Vald.Defesa — Goiás"></div>
+  <div class="ring" aria-hidden="true"><svg viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="54"/><circle class="fg" id="fg" cx="60" cy="60" r="54"/></svg><span id="count">3</span></div>
+  <h1 id="title">Obrigado<span id="nm"></span>.</h1>
+  <p>Você será direcionado ao WhatsApp em instantes para continuar o atendimento.</p>
+  <a class="btn" id="waBtn" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44m8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.79.7.69 5.8.69 12.06c0 2 .52 3.96 1.52 5.68L.6 23.7l6.1-1.6a11.33 11.33 0 0 0 5.35 1.36h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.33-8.03"/></svg>Abrir o WhatsApp agora</a>
+  <a class="back" href="index.html">Voltar ao site</a>
+</main>
+<script src="config.js"></script>
+<script>
+(function(){
+  var C=window.VALD_CONFIG||{},num=String(C.WHATSAPP_NUMBER||'').replace(/\D/g,''),delay=C.REDIRECT_DELAY_MS||3000,nome='';
+  try{nome=new URLSearchParams(location.search).get('nome')||''}catch(e){}
+  if(!nome){try{var s=JSON.parse(sessionStorage.getItem('vald_lead')||'{}');nome=s.nome||''}catch(e){}}
+  nome=nome.trim().slice(0,80);
+  var first=nome.split(/\s+/)[0]||'';
+  if(first)document.getElementById('nm').textContent=', '+first;
+  var msg=(C.WHATSAPP_MESSAGE||'Olá! Gostaria de apresentar minha situação.').replace('{nome}',nome||'').replace(/\s{2,}/g,' ').replace(' ,',',');
+  var url='https://wa.me/'+num+'?text='+encodeURIComponent(msg);
+  document.getElementById('waBtn').href=url;
+  var fg=document.getElementById('fg'),cnt=document.getElementById('count'),t0=performance.now(),L=339.3;
+  (function tick(t){var p=Math.min((t-t0)/delay,1);fg.style.strokeDashoffset=L*(1-p);cnt.textContent=Math.max(1,Math.ceil((delay-(t-t0))/1000));if(p<1)requestAnimationFrame(tick);else{cnt.textContent='✓';try{location.href=url}catch(e){}}})(t0);
+})();
+</script>
+</body>
+</html>
