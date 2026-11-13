@@ -203,10 +203,20 @@ p{margin:0 0 1em}
 .js .panel[hidden]{display:none}
 .panel.show{animation:fadeIn .45s ease both}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}}
-.tech-media{position:relative}
+ .tech-media{position:relative}
+.illo{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:radial-gradient(90% 70% at 50% 42%,#1d2f86 0%,var(--blue) 55%,var(--deep) 100%)}
+.illo::before{content:"";position:absolute;left:50%;top:44%;width:86%;aspect-ratio:1;transform:translate(-50%,-50%);border:3px solid rgba(255,255,255,.08);border-radius:50%}
+.illo::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(circle at 50% 45%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(circle at 50% 45%,#000 30%,transparent 75%)}
+.illo-svg{position:absolute;left:8%;top:6%;width:84%;height:auto;z-index:1;opacity:0;transform:translateY(14px) scale(.94);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.illo-svg.on{opacity:1;transform:none}
+.illo-svg.on .fl{animation:float 5s ease-in-out infinite}
+.illo-svg .draw{stroke-dashoffset:0}
+.illo-svg.on .draw{animation:dash 1.2s ease-out both}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes dash{from{stroke-dashoffset:120;opacity:0}to{opacity:1}}
 .tech-media .ph{aspect-ratio:4/5}
-.law-card{position:absolute;right:-14px;bottom:28px;z-index:2;background:var(--blue);color:var(--white);border-radius:14px;padding:22px 24px;max-width:290px;box-shadow:0 24px 60px -18px rgba(7,14,48,.55)}
-.law-card small{display:flex;align-items:center;gap:10px;font:600 11px/1 var(--font);letter-spacing:.16em;text-transform:uppercase;color:var(--lav);margin-bottom:10px}
+.law-card{position:absolute;right:-14px;bottom:28px;z-index:2;background:var(--white);color:var(--blue);border-radius:14px;padding:22px 24px;max-width:290px;box-shadow:0 24px 60px -18px rgba(7,14,48,.55)}
+.law-card small{display:flex;align-items:center;gap:10px;font:600 11px/1 var(--font);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .law-card small::before{content:"";width:7px;height:7px;background:var(--yellow)}
 .law-card p{margin:0;font:500 15px/1.5 var(--font)}
 .tech-note{margin-top:72px;padding:34px;background:var(--blue);border-radius:16px;display:flex;flex-direction:column;gap:22px;color:var(--white);position:relative;overflow:hidden}
@@ -433,7 +443,43 @@ details .ans p:last-child{margin:0}
   <div class="wrap">
     <div class="tech-grid">
       <div class="tech-media rv">
-        <div class="ph rv"><img src="img/consult-1000.webp" srcset="img/consult-600.webp 600w, img/consult-1000.webp 1000w" sizes="(min-width:960px) 38vw, 92vw" width="1000" height="1250" alt="Conversa reservada em torno de uma mesa de reunião" loading="lazy" decoding="async"></div>
+        <div class="illo" role="img" aria-label="Ilustração do pilar selecionado da defesa técnica">
+          <svg class="illo-svg on" data-illo="analise" viewBox="0 0 400 400" aria-hidden="true"><rect x="108" y="70" width="176" height="230" rx="16" fill="#16267A" stroke="#FFFFFF" stroke-width="3"/>
+<rect x="132" y="168" width="104" height="22" rx="5" fill="#FEC551"/>
+<path d="M140 112h112M140 142h112M140 179h88M140 214h104M140 246h64" stroke="#B3C3FF" stroke-width="7" stroke-linecap="round"/>
+<path d="M140 179h88" stroke="#0F1D5A" stroke-width="7" stroke-linecap="round"/>
+<g class="fl"><circle cx="262" cy="246" r="58" fill="rgba(255,255,255,.1)" stroke="#FFFFFF" stroke-width="9"/>
+<path d="M303 287l44 44" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+<rect x="250" y="234" width="24" height="24" fill="#FEC551"/></g></svg>
+          <svg class="illo-svg" data-illo="elementos" viewBox="0 0 400 400" aria-hidden="true"><rect x="158" y="56" width="150" height="196" rx="14" fill="#0A1444" stroke="#B3C3FF" stroke-width="3" opacity=".7"/>
+<rect x="132" y="82" width="150" height="196" rx="14" fill="#16267A" stroke="#B3C3FF" stroke-width="3"/>
+<g class="fl"><rect x="96" y="112" width="176" height="220" rx="16" fill="#FFFFFF"/>
+<path d="M150 98v30a10 10 0 0 0 20 0V96" stroke="#FEC551" stroke-width="6" fill="none" stroke-linecap="round"/>
+<g stroke-linecap="round">
+<rect x="120" y="150" width="24" height="24" rx="6" fill="#FEC551"/><path d="M126 162l5 5 9-10" stroke="#0F1D5A" stroke-width="3.5" fill="none"/><path d="M160 162h88" stroke="#C5CCE4" stroke-width="9"/>
+<rect x="120" y="198" width="24" height="24" rx="6" fill="#FEC551"/><path d="M126 210l5 5 9-10" stroke="#0F1D5A" stroke-width="3.5" fill="none"/><path d="M160 210h70" stroke="#C5CCE4" stroke-width="9"/>
+<rect x="120" y="246" width="24" height="24" rx="6" fill="#FEC551"/><path d="M126 258l5 5 9-10" stroke="#0F1D5A" stroke-width="3.5" fill="none"/><path d="M160 258h80" stroke="#C5CCE4" stroke-width="9"/>
+<rect x="121.5" y="295.5" width="21" height="21" rx="5" fill="none" stroke="#0F1D5A" stroke-width="3"/><path d="M160 306h56" stroke="#C5CCE4" stroke-width="9"/></g></g></svg>
+          <svg class="illo-svg" data-illo="estrategia" viewBox="0 0 400 400" aria-hidden="true"><g fill="#B3C3FF" opacity=".25"><circle cx="70" cy="70" r="3"/><circle cx="70" cy="110" r="3"/><circle cx="70" cy="150" r="3"/><circle cx="70" cy="190" r="3"/><circle cx="70" cy="230" r="3"/><circle cx="70" cy="270" r="3"/><circle cx="70" cy="310" r="3"/><circle cx="70" cy="350" r="3"/><circle cx="110" cy="70" r="3"/><circle cx="110" cy="110" r="3"/><circle cx="110" cy="150" r="3"/><circle cx="110" cy="190" r="3"/><circle cx="110" cy="230" r="3"/><circle cx="110" cy="270" r="3"/><circle cx="110" cy="310" r="3"/><circle cx="110" cy="350" r="3"/><circle cx="150" cy="70" r="3"/><circle cx="150" cy="110" r="3"/><circle cx="150" cy="150" r="3"/><circle cx="150" cy="190" r="3"/><circle cx="150" cy="230" r="3"/><circle cx="150" cy="270" r="3"/><circle cx="150" cy="310" r="3"/><circle cx="150" cy="350" r="3"/><circle cx="190" cy="70" r="3"/><circle cx="190" cy="110" r="3"/><circle cx="190" cy="150" r="3"/><circle cx="190" cy="190" r="3"/><circle cx="190" cy="230" r="3"/><circle cx="190" cy="270" r="3"/><circle cx="190" cy="310" r="3"/><circle cx="190" cy="350" r="3"/><circle cx="230" cy="70" r="3"/><circle cx="230" cy="110" r="3"/><circle cx="230" cy="150" r="3"/><circle cx="230" cy="190" r="3"/><circle cx="230" cy="230" r="3"/><circle cx="230" cy="270" r="3"/><circle cx="230" cy="310" r="3"/><circle cx="230" cy="350" r="3"/><circle cx="270" cy="70" r="3"/><circle cx="270" cy="110" r="3"/><circle cx="270" cy="150" r="3"/><circle cx="270" cy="190" r="3"/><circle cx="270" cy="230" r="3"/><circle cx="270" cy="270" r="3"/><circle cx="270" cy="310" r="3"/><circle cx="270" cy="350" r="3"/><circle cx="310" cy="70" r="3"/><circle cx="310" cy="110" r="3"/><circle cx="310" cy="150" r="3"/><circle cx="310" cy="190" r="3"/><circle cx="310" cy="230" r="3"/><circle cx="310" cy="270" r="3"/><circle cx="310" cy="310" r="3"/><circle cx="310" cy="350" r="3"/><circle cx="350" cy="70" r="3"/><circle cx="350" cy="110" r="3"/><circle cx="350" cy="150" r="3"/><circle cx="350" cy="190" r="3"/><circle cx="350" cy="230" r="3"/><circle cx="350" cy="270" r="3"/><circle cx="350" cy="310" r="3"/><circle cx="350" cy="350" r="3"/></g>
+<path d="M200 230C250 262 280 300 336 304" stroke="#B3C3FF" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round" fill="none" opacity=".45"/>
+<path d="M330 296l12 12M342 296l-12 12" stroke="#B3C3FF" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+<path class="draw" d="M80 320C150 320 140 230 200 230S262 140 318 140" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 12" stroke-linecap="round" fill="none"/>
+<circle cx="80" cy="320" r="13" fill="#FFFFFF"/>
+<rect x="187" y="217" width="26" height="26" fill="#FEC551"/>
+<g class="fl"><path d="M318 140V70" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><path d="M320 72l46 16-46 16z" fill="#FEC551"/><circle cx="318" cy="140" r="9" fill="#FFFFFF"/></g></svg>
+          <svg class="illo-svg" data-illo="acomp" viewBox="0 0 400 400" aria-hidden="true"><rect x="84" y="88" width="210" height="196" rx="18" fill="#16267A" stroke="#FFFFFF" stroke-width="3"/>
+<path d="M84 106a18 18 0 0 1 18-18h174a18 18 0 0 1 18 18v28H84z" fill="#FFFFFF"/>
+<path d="M130 70v34M248 70v34" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+<g fill="#B3C3FF" opacity=".35"><rect x="106" y="154" width="28" height="22" rx="5"/><rect x="152" y="154" width="28" height="22" rx="5"/><rect x="198" y="154" width="28" height="22" rx="5"/><rect x="244" y="154" width="28" height="22" rx="5"/><rect x="106" y="194" width="28" height="22" rx="5"/><rect x="152" y="194" width="28" height="22" rx="5"/><rect x="244" y="194" width="28" height="22" rx="5"/><rect x="106" y="234" width="28" height="22" rx="5"/><rect x="152" y="234" width="28" height="22" rx="5"/><rect x="198" y="234" width="28" height="22" rx="5"/><rect x="244" y="234" width="28" height="22" rx="5"/></g>
+<rect x="198" y="194" width="28" height="22" rx="5" fill="#FEC551"/>
+<g class="fl"><circle cx="286" cy="282" r="64" fill="#0A1444" stroke="#FEC551" stroke-width="7"/>
+<path d="M286 282v-36M286 282l26 15" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/><circle cx="286" cy="282" r="7" fill="#FEC551"/></g></svg>
+          <svg class="illo-svg" data-illo="garantias" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="205" r="150" fill="none" stroke="#B3C3FF" stroke-width="2" stroke-dasharray="3 10" opacity=".5"/>
+<g class="fl"><path d="M200 66l104 40v92c0 74-46 124-104 150-58-26-104-76-104-150v-92z" fill="#16267A" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+<path d="M200 96l76 30v72c0 54-33 92-76 112-43-20-76-58-76-112v-72z" fill="none" stroke="#B3C3FF" stroke-width="2.5" stroke-dasharray="6 7" opacity=".7"/>
+<path d="M160 206l30 30 56-62" stroke="#FEC551" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="64" y="118" width="16" height="16" fill="#FEC551"/><rect x="326" y="282" width="12" height="12" fill="#FEC551"/><circle cx="330" cy="104" r="6" fill="#FFFFFF"/></svg>
+        </div>
         <div class="law-card"><small>Constituição Federal</small><p>Aos acusados em geral são assegurados o contraditório e a ampla defesa (art. 5º, LV).</p></div>
       </div>
       <div class="rv d1">
@@ -649,7 +695,7 @@ details .ans p:last-child{margin:0}
 })();
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tab'));
-  function sel(t,focus){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;var p=document.getElementById(b.getAttribute('aria-controls'));p.hidden=!on;p.classList.toggle('show',on)});if(focus)t.focus()}
+  function sel(t,focus){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;var k=b.getAttribute('aria-controls').slice(3);var p=document.getElementById('pn-'+k);p.hidden=!on;p.classList.toggle('show',on);var s=document.querySelector('.illo-svg[data-illo="'+k+'"]');if(s)s.classList.toggle('on',on)});if(focus)t.focus()}
   tabs.forEach(function(b,i){b.addEventListener('click',function(){sel(b)});b.addEventListener('keydown',function(e){var k=e.key,n=null;if(k==='ArrowRight')n=tabs[(i+1)%tabs.length];if(k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];if(n){e.preventDefault();sel(n,true)}})});
 })();
 </script>
